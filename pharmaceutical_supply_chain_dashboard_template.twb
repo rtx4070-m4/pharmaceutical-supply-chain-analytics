@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<workbook source-build='2024.1.0' original-version='18.1'>
+  <datasources>
+    <datasource name='Pharma Supply Chain Data' caption='Pharma Supply Chain Data' inline='true'>
+      <connection class='excel-direct' dbname='pharmaceutical_supply_chain_dataset.xlsx' />
+    </datasource>
+  </datasources>
+
+  <worksheets>
+
+    <worksheet name='Supplier Delivery Performance'>
+      <table>
+        <view>
+          <datasource-dependencies datasource='Pharma Supply Chain Data'/>
+          <title>Supplier Delivery Performance</title>
+        </view>
+      </table>
+    </worksheet>
+
+    <worksheet name='Product Demand'>
+      <table>
+        <view>
+          <datasource-dependencies datasource='Pharma Supply Chain Data'/>
+          <title>Product Demand</title>
+        </view>
+      </table>
+    </worksheet>
+
+    <worksheet name='Inventory by Warehouse'>
+      <table>
+        <view>
+          <datasource-dependencies datasource='Pharma Supply Chain Data'/>
+          <title>Inventory Levels by Warehouse</title>
+        </view>
+      </table>
+    </worksheet>
+
+    <worksheet name='Supply Chain Cost'>
+      <table>
+        <view>
+          <datasource-dependencies datasource='Pharma Supply Chain Data'/>
+          <title>Supply Chain Cost Analysis</title>
+        </view>
+      </table>
+    </worksheet>
+
+    <worksheet name='Transport Mode'>
+      <table>
+        <view>
+          <datasource-dependencies datasource='Pharma Supply Chain Data'/>
+          <title>Transport Mode Distribution</title>
+        </view>
+      </table>
+    </worksheet>
+
+  </worksheets>
+
+  <dashboards>
+    <dashboard name='Pharmaceutical Supply Chain Dashboard'>
+      <layout>
+        <zone name='title'/>
+        <zone name='Supplier Delivery Performance'/>
+        <zone name='Product Demand'/>
+        <zone name='Inventory by Warehouse'/>
+        <zone name='Supply Chain Cost'/>
+        <zone name='Transport Mode'/>
+      </layout>
+    </dashboard>
+  </dashboards>
+
+</workbook>
